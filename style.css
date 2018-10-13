@@ -1,0 +1,252 @@
+
+/*Ruyles for the table. */
+header, section, footer, p, nav #headerImgContainer {
+  /*outline: 3px dotted red;*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+/*  outline: 3px dotted green;*/
+  display: flex;
+  display: -webkit-flex; /*Safari prefix*/
+  flex-flow: wrap;
+  justify-content: space-between;
+  margin:auto;
+  max-width: 860px;
+  background-color: #e6e6ff;    /*#e6ffe6 gröna färgen*/
+  font: 100% Arial, Helvetica, sans-serif;
+  min-height: 100vh; /*Denna gör så att header blir större och att allt annat innehåll då trycks ner men detta gör att footern alltid hålls längst ner synlig på skärmen. Eller ja sålänge man inte minimerar fönstert*/
+
+
+
+
+}
+header {
+  flex-basis: 100%;
+
+  order: 1;
+  flex-flow: nowrap;
+  /*background-color: #b3b3ff;*/
+  background-image: linear-gradient(to left, #b3b3ff 40%, #e6f7ff 100%);
+
+  -webkit-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+  -moz-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+  box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+  display: flex;
+  justify-content: space-between;
+  text-shadow: 2px 3px 4px rgba(150, 150, 150, 1);
+  align-items: center; /*centerar innehållet i headern vertikalt*/
+}
+
+footer {
+  text-align: center;
+  order: 6;
+  margin-top: auto;
+  flex-basis: 100%;
+
+}
+
+h1 {
+  font: 300% 'Gloria Hallelujah', cursive, Arial, sans-serif;
+  font-weight: 700;
+  margin-left: 5px;
+
+
+}
+
+#headerImgContainer {
+}
+#headerImg {
+  width: 180px;
+  height: 90px;
+  margin-right: 5px;
+  align-content: center;
+  border: 3px solid #7393ff;
+  border-radius: 7px;
+}
+
+nav {
+  margin-top: 5px;
+  order: 2;
+  flex-basis: 100%;
+  border: 2px solid rgba(44,44,44, 0.5);
+  -webkit-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+  -moz-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+  box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+  display: flex;
+}
+.menuContainer {
+  width: 130px;
+  height: 50px;
+  border: 3px solid #80d4ff;;
+  border-radius: 20px;
+  display: flex;
+  margin: auto;
+  background-color: #80d4ff;
+  -webkit-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+  -moz-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+  box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+}
+.menuContainer:hover {
+  background-color: #99ddff;
+}
+a{
+  text-decoration: none;
+  font-size: 115%;
+  margin: auto;
+}
+.link { /*Länkarna i menyn*/
+  margin: auto;
+  font-weight: 700;
+}
+a:link {
+  color: #444;
+}
+a:visited {
+  color: #333;
+}
+a:hover {
+  color: #900;
+}
+a:active {
+
+}
+
+table {
+
+    /*border: 3px solid rgba(211, 255, 217, 0.9);*/
+    flex-grow: 1;
+
+    border-collapse: collapse;
+    -webkit-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+-moz-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+    order: 5;
+
+    margin-top: 5px;
+
+}
+section {
+
+  border: 2px solid rgba(44,44,44, 0.5);
+
+  margin-top: 5px;
+  order: 4;
+
+  -webkit-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+-moz-box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+box-shadow: -1px 4px 5px 0px rgba(179,179,255,1);
+}
+
+
+p {
+  line-height: 22px;
+  font-size: 115%;
+}
+th {
+    color: #444;
+    border: 3px solid #7393ff;
+    font-size: 140%;
+}
+th:first-child {
+  border-right: 3px solid #aaa;
+}
+
+/*
+tr:nth-child(even) {  färgar varranan rad olika färg
+    background: #F00;
+}
+tr:nth-child(odd) {
+    background: #0F0;
+}*/
+/*Regler för andra kolumnen i tabellen då första kolumnen har sina regler här nedan*/
+td {
+    border: 2px solid #aaa;
+    background-color: #ccc;
+    font-size: 115%;
+    padding: 10px;
+    text-align: center;
+
+}
+
+td:first-child {
+  border-right: 3px solid #999;     /*Bara första kolumnen i tabellen får en tjockare och mörkare höger border*/
+  background-color: #bbb;
+  font-weight: 700;
+  text-shadow: 4px 4px 8px rgba(150, 150, 150, 1);
+
+}
+
+td:hover {
+    background-color: lightblue;    /*Första kolumnen får ljusblå färg när man hovrar över*/
+
+}
+
+td:nth-child(2):hover {
+  background-color: lightgreen;   /*Andra kolumnen får ljusgrön färg när man hovrar över*/
+}
+
+/*=========================================================================================
+                                    ADAPTIVEDESIGN
+=========================================================================================*/
+@media (max-width: 750px) {
+  /*massa regler*/
+}
+
+
+
+
+
+/*=======================================================================================*/
+/*RULES FOR COMMENTFORM. BOth Lena and mmtuts?*/
+/*
+@charset="UTF-8";
+
+body{
+ background-color: #aaa;
+ font: 20px Verdana;
+
+}
+
+h1{
+ font: 20px Verdana;
+ color: red;
+}
+
+.Input{
+ font: 20px Verdana;
+ border: 1px solid orange;
+ width: 300px;
+}
+
+.Submit{
+ font: 20px Verdana;
+ border: 1px solid orange;
+ width: 300px;
+}﻿
+
+input {
+  width: 225px;
+}
+textarea {
+  width: 400px;
+  height: 80px;
+  background-color: #fff;
+  resize: none;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  background-color: #282828;
+  border: none;
+  color: #fff;
+  font-family: arial;
+  font-weight: 400;
+  cursor: pointer;
+}
+*/

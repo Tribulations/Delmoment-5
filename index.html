@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+		<title>Webbutveckling 1</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	</head>
+ <body>
+
+<!--Adding comment to try git-->
+
+<!--									ATT GÖRA -->
+<!--
+1. Fina till all kod! och  så jag använder id och klasser bra.
+fixa kontakt och komentars sidan
+Anpassa till mobil och andra enheter! kolla så att det är anpassat.
+Lägga till prefix för olika browsers.
+Änddra eller lägga till infon mpå första sidan?
+Ha diagram eller fler bilder? Typ nåt kfrafs?
+Ha en länk samling till bra sidaor om werbutevkling?
+
+2.	Jag vill göra direkt länkar i tabellen så att om man t.ex. klickar på html cellen ska man länkas till demonstartions sidan till den delen där html kod demonsterars eller klickar man på javascript ska man länkas till javascripts delen på demo sidan.
+___________________________________________________________________________
+	Att ha på demo sidan.
+	javascript: knapp som ändrar ett element fram och tillbakja, rörliga bilder? typ slideshow?
+
+	CSS: scrolande text, trasition, transform.
+
+	HTML: bara nån kod eller nåt?
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--==================COMMENTSECTION MMTUTS=============================-->
+<!--
+<form>
+		<input type='hidden' name='uid' value='Anonymous'>
+		<input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+		<textarea name='message'> </textarea> <br>
+    <button name='submit' type='submit'>Comment</button>
+	</form>
+-->
+<!--===============================COMMENTFORM Lena tehk=======================-->
+<!--
+ <form action="" method="POST">
+
+	<label> Name:
+	 <input type="text" name="Name" class="Input" required>
+	</label>
+	<br><br>
+	<label> Comment: <br>
+	 <textarea name="Comment" class="Input" required></textarea>
+	</label>
+	<br><br>
+	<input type="submit" name="Submit" value="Submit Comment" class="Submit">
+
+ </form>
+-->
+<!-- include php files-->
+<!--
+
+ 		include('dbh.inc.php');  /* can i write include 'dbh.inc.php'; also?? */
+  	include('contactform.php');
+
+
+-->
+<!--
+if(isset($_POST['Submit'])){
+ print "<h1>Your comment has been submitted!</h1>";
+
+ $Name = $_POST['Name'];
+ $Comment = $_POST['Comment'];
+
+ #Get old comments
+ $old = fopen("comments.txt", "r+t");
+ $old_comments = fread($old, 1024);
+
+ #Delete everything, write down new and old comments
+ $write = fopen("comments.txt", "w+");
+ $string = "<b>".$Name."</b><br>".$Comment."<br>\n".$old_comments;
+ fwrite($write, $string);
+ fclose($write);
+ fclose($old);
+}
+
+#Read comments
+$read = fopen("comments.txt", "r+t");
+echo "<br><br>Comments<hr>".fread($read, 1024);
+fclose($read);
+-->
+
+<!--================================CONTACTFORM======================-->
+<!--
+<p>SEND E-MAIL</p>
+
+<form class="contact-form" action="contactform.php" method="post">
+	<input type="text" name="name" placeholder="Full name">
+	<input type="text" name="mail" placeholder="Your e-mail">
+	<input type="text" name="subject" placeholder="Subject">
+	<textarea name="message" placeholder="Message"></textarea>
+	<button type="submit" name="submit">SEND MAIL</button>
+</form>
+-->
+<!--================================TABLE======================-->
+<header><h1>Webbutveckling 1</h1>
+
+ <div id="headerImgContainer">
+	 <img src="images/html5.png" id="headerImg">
+ </div>
+</header>
+<nav>
+	<a href="./.>"<div class="menuContainer"><p class="link">Kontakt</p></div></a>
+	<a href="./.>"<div class="menuContainer"><p class="link">Demo.</p></div></a>
+	<!--<div class="menuContainer"><a href="./.">Demo.</a></div> dengamla lännken som jag hade den innan -->
+</nav>
+
+
+<table>
+  <tr>
+    <th>Delmoment</th>
+    <th>Innehåll</th>
+  </tr>
+  <tr>
+    <td>Webbteknik</td>
+    <td>Standarder, validering, DNS, URL, query strings, fragment identifiers, http/https, statuskoder, cachning.</td>
+  </tr>
+  <tr>
+    <td>HTML</td>
+    <td>HTML-terminologi, HTML-kod</td>
+  </tr>
+  <tr>
+    <td>CSS</td>
+    <td>CSS-terminologi, CSS-kod</td>
+  </tr>
+  <tr>
+    <td>JavaScript</td>
+    <td>Information om kapitlets innehåll Information om kapitlets innehåll Information om kapitlets innehåll.</td>
+  </tr>
+  <tr>
+    <td>Mobil Webb</td>
+    <td>Responsiv design. Utveckla sina hemsidor så att de automatiskt anpassar sig och visas på bästa sätt beroende vad för enhet man användar för att titta på webbsidan.</td>
+  </tr>
+  <tr>
+    <td>Säkerhet</td>
+    <td>Lösenord</td>
+  </tr>
+</table>
+<section>
+	<p>Det här är kursen webbutveckling 1.<br><br> I tabellen här nedan finns en översiktstabell över några av de delmoment som ingår i kursen.<br>Långt ifrån allt visas i tabellen men några av de viktigaste delarna av arbetet runt en hemsida finns med.<br><br></p>
+	<p>Jag har lärt mig väldigt mycket under denna kurs och en del av det jag lärt mig står med i tabellen</p>
+	<p>Det praktiska arbetet har varit roligast, att få testa sig fram och lära sig av alla de fel man gör. Uppgifterna där man kodat har därför varit det roligaste.</p>
+	<p><br>CSS har sin egen terminologi som t.ex. en regel som består av en eller flera selektorer som har ett deklarationsblock som i sin tur innehåller egenskap/er och dess värde/n. CSS används för att designa hemsidor. Exempel på en uppgift i denna kurs var att använda CSS för att ändra utseendet på en sida. </p>
+
+</section>
+
+<footer><p>&copy2018 Joakim Pettersson</p></footer>
+
+	</body>
+</html>
